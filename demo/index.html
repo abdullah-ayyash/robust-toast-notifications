@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robust Toast Notifications - Live Demo</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/index.css" />
+  </head>
+  <body>
+    <a
+      href="https://github.com/abdullah-ayyash/robust-toast-notifications"
+      class="github-link"
+    >
+      ⭐ Star on GitHub
+    </a>
+
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="hero-section text-center">
+        <h1 class="display-4 mb-4">🚀 Robust Toast Notifications</h1>
+        <p class="lead mb-4">
+          Production-ready notification system with bulletproof error handling,
+          validation, and user experience features that actually work in real
+          applications.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">🛡️</div>
+            <div>Bulletproof Validation</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">🎯</div>
+            <div>Duplicate Prevention</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">🧹</div>
+            <div>Auto Cleanup</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">⚡</div>
+            <div>Error Reporting</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Section -->
+      <div class="demo-card">
+        <h2 class="mb-4">🎮 Interactive Demo</h2>
+        <p class="text-muted mb-4">
+          Try the buttons below. Notice how duplicate messages are prevented and
+          invalid inputs are handled gracefully!
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <button class="btn btn-gradient w-100" onclick="demo.showSuccess()">
+              ✅ Success Message
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-gradient w-100" onclick="demo.showError()">
+              ❌ Error Message
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <button class="btn btn-gradient w-100" onclick="demo.showWarning()">
+              ⚠️ Warning Message
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-gradient w-100" onclick="demo.showInfo()">
+              ℹ️ Info Message
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <button
+              class="btn btn-gradient w-100"
+              onclick="demo.testValidation()"
+            >
+              🔧 Test Validation (Check Console)
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button class="btn btn-gradient w-100" onclick="demo.stressTest()">
+              💥 Stress Test (5 rapid toasts)
+            </button>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <strong>💡 Pro Tip:</strong> Open your browser's console (F12) to see
+          the error reporting system in action!
+        </div>
+      </div>
+
+      <!-- Why This Library -->
+      <div class="demo-card">
+        <h2 class="mb-4">🤔 Why Another Toast Library?</h2>
+        <p class="mb-3">
+          Most toast libraries break in production. Here's what makes this one
+          different:
+        </p>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="feature-icon">🛡️</div>
+            <h5>Bulletproof Input Validation</h5>
+            <p class="text-muted">
+              Invalid parameters don't crash your app. They get logged,
+              reported, and handled gracefully with sensible fallbacks.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="feature-icon">🎯</div>
+            <h5>Smart Duplicate Prevention</h5>
+            <p class="text-muted">
+              Automatically prevents identical messages from spamming users.
+              Based on message content, not timing.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="feature-icon">🧹</div>
+            <h5>Zero Memory Leaks</h5>
+            <p class="text-muted">
+              Automatically cleans up DOM elements, event listeners, and empty
+              containers. No manual cleanup required.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="feature-icon">📊</div>
+            <h5>Built-in Error Reporting</h5>
+            <p class="text-muted">
+              Comprehensive logging with context and metadata. Ready for
+              production monitoring tools like Sentry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Installation -->
+      <div class="demo-card">
+        <h2 class="mb-4">📦 Quick Start</h2>
+
+        <h5>1. Install</h5>
+        <div class="code-section">
+          <pre><code class="language-bash">npm install bootstrap
+# Clone or download the files</code></pre>
+        </div>
+
+        <h5>2. Import</h5>
+        <div class="code-section">
+          <pre><code class="language-javascript">import notificationService from './src/notificationService.js';
+
+// Simple usage
+notificationService.success('✅ Data saved!');
+notificationService.error('❌ Something went wrong');
+notificationService.warning('⚠️ Check your input');
+
+// Advanced usage
+notificationService.showToast('Custom message', 'info', 3000);</code></pre>
+        </div>
+
+        <h5>3. That's it!</h5>
+        <p class="text-muted">
+          The system handles validation, duplicates, cleanup, and error
+          reporting automatically.
+        </p>
+      </div>
+
+      <!-- Comparison -->
+      <div class="demo-card">
+        <h2 class="mb-4">📊 vs Other Libraries</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>This Library</th>
+                <th>Basic Bootstrap</th>
+                <th>Toastr.js</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Input Validation</td>
+                <td><span class="text-success">✅ Bulletproof</span></td>
+                <td><span class="text-danger">❌ None</span></td>
+                <td><span class="text-warning">⚠️ Basic</span></td>
+              </tr>
+              <tr>
+                <td>Duplicate Prevention</td>
+                <td><span class="text-success">✅ Smart</span></td>
+                <td><span class="text-danger">❌ None</span></td>
+                <td><span class="text-danger">❌ None</span></td>
+              </tr>
+              <tr>
+                <td>Memory Management</td>
+                <td><span class="text-success">✅ Automatic</span></td>
+                <td><span class="text-warning">⚠️ Manual</span></td>
+                <td><span class="text-warning">⚠️ Manual</span></td>
+              </tr>
+              <tr>
+                <td>Error Reporting</td>
+                <td><span class="text-success">✅ Built-in</span></td>
+                <td><span class="text-danger">❌ None</span></td>
+                <td><span class="text-danger">❌ None</span></td>
+              </tr>
+              <tr>
+                <td>Production Ready</td>
+                <td><span class="text-success">✅ Yes</span></td>
+                <td><span class="text-danger">❌ Fragile</span></td>
+                <td><span class="text-warning">⚠️ Sometimes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <!-- Make Bootstrap available to ES modules -->
+    <script>
+      // Bootstrap CDN automatically creates window.bootstrap
+      // But we can ensure it's available with a fallback
+      window.bootstrap = window.bootstrap || bootstrap;
+    </script>
+
+    <script type="module">
+      // Import the actual modules
+      import notificationService from "../src/notificationService.js";
+
+      // Demo functions
+      window.demo = {
+        showSuccess() {
+          notificationService.success(
+            "🎉 Operation completed successfully! Your data has been saved."
+          );
+        },
+
+        showError() {
+          notificationService.error(
+            "💥 Oops! Something went wrong. Please try again later."
+          );
+        },
+
+        showWarning() {
+          notificationService.warning(
+            "⚠️ Warning: Please check your input before proceeding."
+          );
+        },
+
+        showInfo() {
+          notificationService.info(
+            "ℹ️ Did you know? This system prevents duplicates automatically!"
+          );
+        },
+
+        testValidation() {
+          console.log(
+            "🔧 Testing validation - check console for error reports:"
+          );
+          notificationService.showToast("", "invalid-type", -100);
+          notificationService.showToast(null, "fake-type", "not-a-number");
+          setTimeout(() => {
+            notificationService.info(
+              "✅ Validation test complete - check console logs!"
+            );
+          }, 500);
+        },
+
+        stressTest() {
+          const messages = [
+            "🚀 Loading user data...",
+            "📊 Processing analytics...",
+            "💾 Saving preferences...",
+            "🔄 Syncing with server...",
+            "✅ All operations complete!",
+          ];
+
+          messages.forEach((msg, index) => {
+            setTimeout(() => {
+              notificationService.info(msg);
+            }, index * 200);
+          });
+        },
+      };
+
+      // Welcome message
+      setTimeout(() => {
+        notificationService.info(
+          "👋 Welcome! Try the demo buttons and check your console for error reporting."
+        );
+      }, 1000);
+    </script>
+  </body>
+</html>
