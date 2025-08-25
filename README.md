@@ -1,13 +1,13 @@
 # 🚀 Robust Toast Notifications
 
-[![Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://abdullah-ayyash.github.io/robust-toast-notifications)
+[![Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://abdullah-ayyash.github.io/robust-toast-notifications/demo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **The Last Toast Library You'll Ever Need** ✨
 
 A production-ready notification system that actually works in real applications. Built with bulletproof validation, smart duplicate prevention, automatic cleanup, and comprehensive error reporting.
 
-## 🎯 [Try the Live Demo](https://abdullah-ayyash.github.io/robust-toast-notifications)
+## 🎯 [Try the Live Demo](https://abdullah-ayyash.github.io/robust-toast-notifications/demo)
 
 ## 🤔 Why Another Toast Library?
 
